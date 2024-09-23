@@ -13,13 +13,15 @@ public:
 
 staticClassFree::staticClassFree(int val)
 {
-    core = val;
+    core += val;
 }
 
 staticClassFree::~staticClassFree()
 {
     std::cout << core << std::endl;
 }
+
+int staticClassFree::core = 0;
 
 
 class HighLevel
@@ -46,7 +48,7 @@ void example(){
     HighLevel B(2);
 }
 
-void main(){
+int main(){
     HighLevel A(1);
     example();
 }
