@@ -9,6 +9,7 @@
 // 设置进程名称 (使用 prctl 来修改)
 #include <sys/prctl.h>
 
+// Linux 中的每个线程都是一个轻量级进程（Lightweight Process，LWP）, Linux 中 进程的名字和主线程的名字是相同的
 void set_process_name(const std::string &name) {
     prctl(PR_SET_NAME, name.c_str(), 0, 0, 0);
 }
