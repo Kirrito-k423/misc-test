@@ -47,6 +47,13 @@ void get_cpu_affinity() {
 }
 
 int main() {
+    std::cout << "Parent process name: " << get_process_name() << std::endl;
+    std::cout << "Parent process CPU affinity: ";
+    get_cpu_affinity();
+
+
+    std::cout << "Set Parent Process info." << std::endl;
+
     // 设置父进程的名称和 CPU 亲和性
     set_process_name("ParentProc");
     set_cpu_affinity(1); // 将父进程绑定到 CPU 1
@@ -62,6 +69,13 @@ int main() {
         return 1;
     } else if (pid == 0) {
         // 子进程执行部分
+        pid_t child_pid = getpid(); // 子进程PID
+        pid_t parent_pid_of_child = getppid(); // 子进程的父进程PID
+
+        std::cout << "\nChild process started." << std::endl;
+        std::cout << "Child process PID: " << child_pid << std::endl;
+        std::cout << "Parent PID of child process: " << parent_pid_of_child << std::endl;
+
         std::cout << "\nChild process started." << std::endl;
 
         std::string child_name = get_process_name();
