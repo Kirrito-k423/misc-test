@@ -1,4 +1,4 @@
 # cpp test
 
 
-* childThreadInfo: 子线程会继承父线程的name和亲和性设置。
+* childThreadInfo: 子线程/进程/muiltiproccessing会继承父辈的name和亲和性设置。
