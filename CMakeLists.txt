@@ -12,3 +12,4 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O3")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O3")
 
 add_executable(test_static test/staticClassFree.cpp)
+add_executable(test_child_thread_info test/childThreadInfo.cpp)
