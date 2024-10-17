@@ -11,5 +11,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O3")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O3")
 
+# test 1
 add_executable(test_static test/staticClassFree.cpp)
+
+# test 2
 add_executable(test_child_thread_info test/childThreadInfo.cpp)
+target_link_libraries(test_child_thread_info pthread)
