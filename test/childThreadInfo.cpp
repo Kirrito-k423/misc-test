@@ -53,6 +53,12 @@ void child_thread_function() {
 }
 
 int main() {
+    // 打印父线程信息
+    std::cout << "Parent thread name: " << get_thread_name() << std::endl;
+    std::cout << "Parent thread CPU affinity: ";
+    get_thread_affinity();
+
+    std::cout << "Set Parent thread info." << std::endl;
     // 设置父线程的线程名称
     std::string parent_thread_name = "ParentThread";
     set_thread_name(parent_thread_name);

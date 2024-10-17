@@ -17,3 +17,7 @@ add_executable(test_static test/staticClassFree.cpp)
 # test 2
 add_executable(test_child_thread_info test/childThreadInfo.cpp)
 target_link_libraries(test_child_thread_info pthread)
+
+# test 2
+add_executable(test_child_process_info test/childProcessInfo.cpp)
+target_link_libraries(test_child_thread_info pthread)
