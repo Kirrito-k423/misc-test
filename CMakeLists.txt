@@ -21,3 +21,7 @@ target_link_libraries(test_child_thread_info pthread)
 # test 2
 add_executable(test_child_process_info test/childProcessInfo.cpp)
 target_link_libraries(test_child_thread_info pthread)
+
+# test 2
+add_executable(test_bind_child_task test/bindChildTasksUsingPstree.cpp)
+target_link_libraries(test_bind_child_task pthread)
